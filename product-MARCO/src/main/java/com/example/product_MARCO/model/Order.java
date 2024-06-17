@@ -11,8 +11,8 @@ import java.util.List;
 public class Order {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idCommande;
-    private Long idClient;
+    private int idCommande;
+    private int idClient;
     private LocalDateTime dateCommande;
 
     @ElementCollection
@@ -20,19 +20,19 @@ public class Order {
 
     // Getters and Setters
 
-    public Long getIdCommande() {
+    public int getIdCommande() {
         return idCommande;
     }
 
-    public void setIdCommande(Long idCommande) {
+    public void setIdCommande(int idCommande) {
         this.idCommande = idCommande;
     }
 
-    public Long getIdClient() {
+    public int getIdClient() {
         return idClient;
     }
 
-    public void setIdClient(Long idClient) {
+    public void setIdClient(int idClient) {
         this.idClient = idClient;
     }
 
@@ -55,16 +55,16 @@ public class Order {
 
 @Embeddable
 class ProductInfo {
-    private Long idProduit;
+    private int idProduit;
     private Integer nombreProduit;
 
     // Getters and Setters
 
-    public Long getIdProduit() {
+    public int getIdProduit() {
         return idProduit;
     }
 
-    public void setIdProduit(Long idProduit) {
+    public void setIdProduit(int idProduit) {
         this.idProduit = idProduit;
     }
 
